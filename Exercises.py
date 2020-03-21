@@ -344,5 +344,34 @@ else:
 
 ## 5-6. Stages of Life: Write an if-elif-else chain that determines a person's stage of life. Set a value for the variable age, and then:
 # If the person is less than 2 years old, print, person is a baby.
+ age = 2
+if age < 2:
+    print("You are a Baby!")
+elif age >=2 and age <4:
+    print("You are a Toddler!")
+elif age >=4 and age <13:
+    print("You are a Kid!")
+elif age >=13 and age <20:
+    print("You are a Teenager!")
+elif age >=20 and age >65:
+    print("You are a Adult!")
+elif age > 65:
+    print("You are and Elder")
 
- 
+## 5-7. Favorite Fruit: Make a list of your favorite fruits, and then write a series of independent if statement that check for certain fruits in your list.
+favoriteFruits = ['apple', 'orange', 'banana']
+if 'apple' in favoriteFruits:
+    print("Eat an apple a day keeps the doctor away.")
+elif 'orange' in favoriteFruits:
+    print('We pack the juice')
+elif 'banana' in favoriteFruits:
+    print('You really like the banana.')
+
+### Page 93
+## 5-8. Hello Admin. Male a list of five or more username, including the name 'admin'. 
+# If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
+usernames = ['admin', 'santiago', 'pesarak', 'shangule', 'hooman']
+for usernames in usernames:
+    if 'admin' in usernames:
+        print("Hello Admin, do you like to see a status report?")
+# 
