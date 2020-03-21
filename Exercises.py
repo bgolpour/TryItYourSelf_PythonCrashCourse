@@ -294,6 +294,55 @@ if 'green' in alien_color:
 elif 'blue' in alien_color:
     print("You earned 5 points.")
 
-## 5-4. Alien Colors #2:
+## 5-4. Alien Colors #2: Choose a color for an alien and write an if-else chain.
+# If the alien's color is green, print a statement that the player just earned 5 points.
+alien_color = ['green']
+if 'green' in alien_color:
+    print('You earned 5 points.')
 
+# If the alien's color is not green.
+alien_color = ['blue']
+if 'green' in alien_color:
+    print('You earned 5 points.')
+if 'green' not in alien_color:
+    print('You just earned 10 points.')
 
+# Write one version that runs the if (which we did), and another that runs the else block.
+alien_color = ['blue']
+if 'green' in alien_color:
+    print('You earned 5 points.')
+else:
+    print("Feel free to try again.")
+
+## 5-5. Alien Colors #3: Turn your if-else chain from Exercise 5-4 into an if-elif-else chain.
+# If the alien is green, print you earned 5 points.
+alien_color = ['green', 'red', 'yellow']
+if 'green' in alien_color:
+    print('You earned 5 points.')
+elif 'yellow' in alien_color:
+    print('You earned 10 points.')
+else:
+    print('You earned 15 points.')
+
+# If yellow you earne, 10 points.
+alien_color = ['black', 'red', 'yellow']
+if 'green' in alien_color:
+    print('You earned 5 points.')
+elif 'yellow' in alien_color:
+    print('You earned 10 points.')
+else:
+    print('You earned 15 points.')
+
+# If red you earne, 15 points.
+alien_color = ['black', 'red', 'gray']
+if 'green' in alien_color:
+    print('You earned 5 points.')
+elif 'yellow' in alien_color:
+    print('You earned 10 points.')
+else:
+    print('You earned 15 points.')
+
+## 5-6. Stages of Life: Write an if-elif-else chain that determines a person's stage of life. Set a value for the variable age, and then:
+# If the person is less than 2 years old, print, person is a baby.
+
+ 
