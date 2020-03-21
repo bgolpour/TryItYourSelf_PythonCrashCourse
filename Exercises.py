@@ -370,8 +370,50 @@ elif 'banana' in favoriteFruits:
 ### Page 93
 ## 5-8. Hello Admin. Male a list of five or more username, including the name 'admin'. 
 # If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
-usernames = ['admin', 'santiago', 'pesarak', 'shangule', 'hooman']
+
 for usernames in usernames:
     if 'admin' in usernames:
         print("Hello Admin, do you like to see a status report?")
-# 
+# Otherwise, print a generic greeting for everyone, such as Hello...
+usernames = ['admin', 'santiago', 'pesarak', 'shangule', 'hooman']
+admin_username = ['admin']
+for usernames in usernames:
+    if admin_username in usernames:
+        print("Hello Admin, do you want to see a status report?")
+    else:
+        print("Hello" + usernames + "thank you for logging again.")
+
+## 5-9. No Users. Add an if test to hello admin to make sure the list of users is not empty.
+# If the list is empty, print the message, we need to find some users!
+users = []
+if users:
+    for users in users:
+        print("Thank you for logging again.")
+else: 
+    print("We need to find some users!")
+
+## 5-10. Checking Usernames:
+# Make a list of five or more usernames called current_users.
+# Make another list of five or more usernames called new_users.
+# Loop throgh the new_users list to see if each new username has already been used. Print message in both conditions.
+current_users = ['admin', 'santiago', 'pesarak', 'shangule', 'hooman']
+new_users = ['admin_1', 'admin_2', 'santiago', 'pesarak', 'shangule', 'hooman']
+for new_user in new_users:
+    if new_user in current_users:
+        print("You need to enter a new username.")
+    else:
+        print("This username is available")
+
+## 5-11. Ordinal Numbers.
+# Store the numbers 1 through 9 in a list.
+# Loop through the list.
+# Use an if-elif-else chain inside the loop to print the proper ordinal ending for each number.
+ordinal_numbers = ['1st','2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th']
+first_three = ['1st','2nd', '3rd']
+the_rest = ['4th', '5th', '6th', '7th', '8th', '9th']
+for first_three in first_three:
+    if first_three in ordinal_numbers:
+        print("For the first 3 the correct ordinal ending is st, nd, rd")
+for the_rest in the_rest:
+    if the_rest in ordinal_numbers:
+        print("For the rest the correct ordinal ending will take th at the end.")
