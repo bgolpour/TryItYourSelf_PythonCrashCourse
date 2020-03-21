@@ -281,10 +281,19 @@ if age >= 18:
     print("You are old enough to vote.")
 
 ### Page 88 
-## 5-3. Alien Colors #1.
+## 5-3. Alien Colors #1:
 # If the alien's color is green.
+alien_color = ["green"]
+if 'green' in alien_color:
+    print("You earned 5 points.")
+
+# Write one version that passes the if test and another that fails.(The version that fails will have no output.)
 alien_color = ['green']
-for color in alien_color:
-    if color == 'green':
-        point = 5 
-        print("You earn 5 points.")
+if 'green' in alien_color:
+    print("You earned 5 points.")
+elif 'blue' in alien_color:
+    print("You earned 5 points.")
+
+## 5-4. Alien Colors #2:
+
+
