@@ -417,3 +417,37 @@ for first_three in first_three:
 for the_rest in the_rest:
     if the_rest in ordinal_numbers:
         print("For the rest the correct ordinal ending will take th at the end.")
+### Page 102
+## 6-1. Person
+Sarah = {
+    'first_name': 'sarah',
+    'last_name': 'bing',
+    'age': 25,
+    'city': 'chicago',
+}
+print("Sarah's last name is: " + Sarah['last_name'].title() + ".")
+print("She is from " + Sarah['city'].title() + ".")
+print("And she is " + str(Sarah['age']) + " years old ")
+
+## 6-2. Favorite Numbers.
+Favorite_Numbers = {
+    'Jame': 25,
+    'Jesse': 35,
+    'Jack': 45,
+    'Joi': 55,
+}
+print("Jack's favorite number is " + str(Favorite_Numbers['Jack']) + ".")
+
+## 6-3. Glossary
+Glossary  = {
+    'Boolean': 'conditional test',
+    'percentage': 'remainder operator',
+    'tuples': 'unchangeable list',
+    'statement': 'complete line of code',
+    'expression': 'any section of the code that evaluates to a value',
+}
+print("\nIn Pyhton Boolean means: " + Glossary['Boolean'] + ".")
+print("\nIn Pyhton percentage sign means: " + Glossary['percentage'] + ".")
+print("\nIn Pyhton tuples means: " + Glossary['tuples'] + ".")
+print("\nIn Pyhton statement  means: " + Glossary['statement'] + ".")
+print("\nIn Pyhton expression means: " + Glossary['expression'] + ".")
