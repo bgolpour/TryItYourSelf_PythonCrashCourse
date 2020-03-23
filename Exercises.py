@@ -451,3 +451,37 @@ print("\nIn Pyhton percentage sign means: " + Glossary['percentage'] + ".")
 print("\nIn Pyhton tuples means: " + Glossary['tuples'] + ".")
 print("\nIn Pyhton statement  means: " + Glossary['statement'] + ".")
 print("\nIn Pyhton expression means: " + Glossary['expression'] + ".")
+
+### Page 108
+## 6-4. Glossary 2
+
+for key, value in Glossary.items(): 
+        print("\nIn Pyhton " + key + "means: " + Glossary[key].title() + ".")
+
+## 6-5. Rivers
+rivers = {
+        'nile': 'egypt',
+        'Chobe': 'Namibia',
+        'Congo': 'Republic of Congo',
+        'Lawrence': 'canada',
+        }
+for name, river in rivers.items():
+        print("The " + name.title() + " is running through " + river.title() + ".")
+
+## 6-6. Polling
+favorite_languages = {
+        'jen' : 'python',
+        'sarah' : 'c',
+        'edward' : 'ruby',
+        'phil': 'python'
+        }
+
+people = ['jen', 'sarah', 'Judi', 'Jacob']
+for name in people:
+    # print(name + "Thank you for taking the poll!!")
+
+    if name in favorite_languages:
+        print("Dear " + name.title() + " Thank you for taking the poll!!")
+    else:
+        print(" Dear" + name.title() + " don't forget to take the poll.")
+
