@@ -485,3 +485,30 @@ for name in people:
     else:
         print(" Dear" + name.title() + " don't forget to take the poll.")
 
+### Page 114
+## 6-7. People
+people= {
+    'Sarah': {
+    'first_name': 'sarah',
+    'last_name': 'bing',
+    'age': 25,
+    'city': 'chicago',
+    },
+    'Jen': {
+    'first_name': 'jen',
+    'last_name': 'james',
+    'age': 35,
+    'city': 'charslton',
+    },
+    'Jesse': {
+    'first_name': 'jesse',
+    'last_name': 'jackson',
+    'age': 45,
+    'city': 'denver',
+    },
+}
+for user, user_info in people.items():
+    fullname = user_info['first_name'] + " " + user_info['last_name']
+    loacation =  user_info['city']
+    print("\n Full name: " + fullname.title())
+    print("Location: " + loacation.title())
