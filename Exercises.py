@@ -527,10 +527,20 @@ else:
     print("Your table is ready.")
 
 ##7-3. Multiple of Ten
-number = input("Enter a number, and I'll tell you if it's multiple of 10 or not.")
+number = input("Tell me a number, and I'll tell you it is multiple of 10 or not.")
 number = int(number)
-
-if number % 10 == 0:
-    print("\nThe number " + str(number) + " is a multiple of ten.")
+if number %10 == 0:
+    print("\nThe number: " + str(number) + " is a multiple of ten.")
 else:
-    print("\nThe number " + str(number) + " is not a multiple of ten.")
+    print("\nThe number: " + str(number) + " is a multiple of ten.")
+
+### Page 127
+## 7-4. Pizza Toppings
+prompt = "\nAdd a topping to your pizza."
+prompt += "\n(Enter 'quit', If you are finished with toppings.)"
+while True:
+    toppings = input(prompt)
+    if toppings == 'quit':
+        break
+    else:
+        print("I would like to have more: " + toppings.title())
