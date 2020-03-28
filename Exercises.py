@@ -615,3 +615,16 @@ while True:
     else:
         print("I'll go to: " + city.title() + "!")
 
+### Page 135
+## 8-1. Messages
+def display_message(chapter):
+    """display sth."""
+    print("I learned how to make a function in chapter: " + chapter.title() + ".")
+display_message('eight')
+
+## 8-2. Favorite Book
+def favorite_book(Book):
+    """Anything"""
+    print("My favorite book is: " + Book.title() + ".")
+favorite_book('Alice in Wonderland')
+
