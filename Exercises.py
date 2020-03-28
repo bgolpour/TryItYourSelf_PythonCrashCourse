@@ -654,3 +654,11 @@ def describe_city(city, country='Iceland'):
 describe_city('Reykjavik')
 describe_city('Tehran', 'Iran')
 describe_city(city='Paris', country= 'France')
+
+### 8-6. City Names
+def city_country(city, country):
+    s_string = city + ' , ' + country
+    return s_string.title()
+s_s_string = city_country('santiago','chile')
+print(s_s_string)
+### 8-7. Album
