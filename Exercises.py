@@ -628,3 +628,29 @@ def favorite_book(Book):
     print("My favorite book is: " + Book.title() + ".")
 favorite_book('Alice in Wonderland')
 
+### Page 141
+## 8-3. T-Shirt
+# Positional
+def make_shirt(size, text):
+    """Anything"""
+    print("This shirt size is: " + size + " Print this as the text: " + text.upper())
+make_shirt('XL', 'I Love Newyork')
+
+# Keyword 
+def make_shirt(size, text):
+    """Anything"""
+    print("This shirt size is: " + size + " Print this as the text: " + text.upper())
+make_shirt(size= 'XL', text='I Love Newyork')
+
+## 8-4. Large Shirts
+def make_shirt(text, size='Large'):
+    """Anything"""
+    print("This shirt size is: " + size + "." + " Print this as the text: " + text.upper())
+make_shirt(text='I Love Python')
+
+## 8-5. Cities
+def describe_city(city, country='Iceland'):
+    print(city.title() + " is in " + country.title() + ".")
+describe_city('Reykjavik')
+describe_city('Tehran', 'Iran')
+describe_city(city='Paris', country= 'France')
