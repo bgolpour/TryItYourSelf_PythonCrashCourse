@@ -586,7 +586,7 @@ while True:
 
 
 ### Page 131
-# 7-8. Deli
+## 7-8. Deli
 Sandwich_orders = ['American_sub', 'Beef_on_weck', 'BLT', 'Bologna', 'Cheese_dream']
 finished_sandwiches = []
 while Sandwich_orders:
@@ -596,3 +596,22 @@ while Sandwich_orders:
 print("\n The following are include in Sandwich orders: ")
 for finished_sandwiche in finished_sandwiches:
     print(finished_sandwiche)
+
+## 7-9. No Pastrami
+Sandwich_orders = ['Pastrami','American_sub','Pastrami','Beef_on_weck','BLT','Bologna','Pastrami','Cheese_dream']
+finished_sandwiches = []
+# print("The Deli has run out of Pastrami")
+while 'Pastrami'in Sandwich_orders:
+    Sandwich_orders.remove('Pastrami')
+print(Sandwich_orders)
+
+## 7-10. Dream Vacations
+prompt = "\n Where the hell you wanna go for the vacation?"
+prompt += "\n(Enter 'quit' when you are finished.)"
+while True:
+    city = input(prompt)
+    if city == 'quit':
+        break
+    else:
+        print("I'll go to: " + city.title() + "!")
+
