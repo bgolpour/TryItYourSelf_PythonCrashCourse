@@ -538,9 +538,61 @@ else:
 ## 7-4. Pizza Toppings
 prompt = "\nAdd a topping to your pizza."
 prompt += "\n(Enter 'quit', If you are finished with toppings.)"
+
 while True:
-    toppings = input(prompt)
-    if toppings == 'quit':
+    topping = input(prompt)
+    if topping == 'quit':
         break
-    else:
-        print("I would like to have more: " + toppings.title())
+    else: 
+        print(topping + " will add to your pizza.")
+
+
+## 7-5. Movie Tickets
+age = input("\nHow old are you?" )
+age = int(age)
+
+if age < 3:
+    print("The ticket is free for 3 years old and less.")
+elif (age >= 3) and (age < 12):
+    print("The ticket is $12.")
+elif age > 12:
+    print("The ticket is $15.")
+
+
+## 7-6. Three Exits
+# Conditional Test
+
+
+# Active variable
+prompt = "\nAdd a topping to your pizza."
+prompt += "\n(Enter 'quit', If you are finished with toppings.)"
+active = True
+while active :
+    topping = input(prompt)
+    if topping == 'quit':
+        active = False
+    else: 
+        print(topping + " will add to your pizza.")
+# Break statement
+prompt = "\nAdd a topping to your pizza."
+prompt += "\n(Enter 'quit', If you are finished with toppings.)"
+
+while True:
+    topping = input(prompt)
+    if topping == 'quit':
+        break
+    else: 
+        print(topping + " will add to your pizza.")
+
+
+### Page 131
+# 7-8. Deli
+Sandwich_orders = ['American_sub', 'Beef_on_weck', 'BLT', 'Bologna', 'Cheese_dream']
+finished_sandwiches = []
+while Sandwich_orders:
+    InprocessSandwiches = Sandwich_orders.pop()
+    print("I made a: " + InprocessSandwiches.title())
+    finished_sandwiches.append(InprocessSandwiches)
+print("\n The following are include in Sandwich orders: ")
+for finished_sandwiche in finished_sandwiches:
+    print(finished_sandwiche)
