@@ -657,8 +657,34 @@ describe_city(city='Paris', country= 'France')
 
 ### 8-6. City Names
 def city_country(city, country):
-    s_string = city + ' , ' + country
-    return s_string.title()
-s_s_string = city_country('santiago','chile')
-print(s_s_string)
+    city_names = city + ' , ' + country
+    return city_names.title()
+
+city_country_names = city_country('santiago','chile')
+city_country_names = city_country('paris', 'france')
+city_country_names = city_country('london', 'britian')
+print(city_country_names)
+
 ### 8-7. Album
+def make_album(artist_name, album_title, number_of_tracks=''):
+    music_album = {'artist': artist_name,'title': album_title}
+    return music_album
+album_made = make_album('bonjovi', 'bounce')
+album_made = make_album('guns n roses', 'apetite for destruction')
+print(album_made)
+
+### User Albums
+def make_album(artist_name, album_title):
+    music_album = {'artist': artist_name,'title': album_title}
+    return music_album
+while True:
+    print("\nenter the artist name and album title.")
+    print("\nenter 'q' to quit.")
+    artist_n = input("artist_name: ")
+    if artist_n == 'q':
+        break
+    album_t = input("album_name: ")
+    if album_t == 'q':
+        break
+    album_made = make_album(artist_n, album_t)
+    print(album_made)
