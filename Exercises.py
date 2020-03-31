@@ -655,7 +655,8 @@ describe_city('Reykjavik')
 describe_city('Tehran', 'Iran')
 describe_city(city='Paris', country= 'France')
 
-### 8-6. City Names
+### Page 146
+## 8-6. City Names
 def city_country(city, country):
     city_names = city + ' , ' + country
     return city_names.title()
@@ -665,7 +666,7 @@ city_country_names = city_country('paris', 'france')
 city_country_names = city_country('london', 'britian')
 print(city_country_names)
 
-### 8-7. Album
+## 8-7. Album
 def make_album(artist_name, album_title, number_of_tracks=''):
     music_album = {'artist': artist_name,'title': album_title}
     return music_album
@@ -673,7 +674,7 @@ album_made = make_album('bonjovi', 'bounce')
 album_made = make_album('guns n roses', 'apetite for destruction')
 print(album_made)
 
-### User Albums
+## 8-8 User Albums
 def make_album(artist_name, album_title):
     music_album = {'artist': artist_name,'title': album_title}
     return music_album
@@ -688,3 +689,28 @@ while True:
         break
     album_made = make_album(artist_n, album_t)
     print(album_made)
+
+### Page 150
+## 8-9. Magicians
+def show_magicians(names):
+    for name in names:
+        print(name)
+magicians_name = ['hannah','ty','margot'] 
+show_magicians(magicians_name)
+
+## 8-10. Great Magicians
+def show_magicians(names):
+    for name in names:
+        print(name)
+magicians_name = ['hannah','ty','margot'] 
+show_magicians(magicians_name)
+
+
+def make_great(modified_names):
+    for modified_name in modified_names:
+        complete_phrase = "The Greate " + modified_name + "!"
+        print(complete_phrase)
+magicians_name = ['hannah','ty','margot'] 
+make_great(magicians_name)
+
+## 8-11. Unchanged Magicians
