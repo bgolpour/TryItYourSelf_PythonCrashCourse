@@ -758,3 +758,10 @@ def car_info(manufacturer_name, model_name, **optional_features):
 
 car_profile = car_info('subaru', 'outback', color = 'blue', two_package = 'True')
 print(car_profile)
+
+### Page 159
+## 8-15. Printing Models
+## The solutions are in seprated .py files with related names
+## 8-16. Imports
+## 8-17. Styling Functions
+
