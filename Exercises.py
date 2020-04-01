@@ -693,24 +693,68 @@ while True:
 ### Page 150
 ## 8-9. Magicians
 def show_magicians(names):
+    print("These are magician's names: ")
     for name in names:
-        print(name)
-magicians_name = ['hannah','ty','margot'] 
-show_magicians(magicians_name)
+        print("-" + name.title())
+names = ['hannah','ty','margot']
+show_magicians(names)
 
 ## 8-10. Great Magicians
 def show_magicians(names):
     for name in names:
         print(name)
-magicians_name = ['hannah','ty','margot'] 
-show_magicians(magicians_name)
 
-
-def make_great(modified_names):
-    for modified_name in modified_names:
-        complete_phrase = "The Greate " + modified_name + "!"
-        print(complete_phrase)
-magicians_name = ['hannah','ty','margot'] 
-make_great(magicians_name)
+def make_great(names):
+    print("These are magician's names: ")
+    for name in names:
+        print("-The Great " + name.title() + ".")
+names = ['hannah','ty','margot']
+show_magicians(names)
+make_great(names[:])
 
 ## 8-11. Unchanged Magicians
+def show_magicians(names):
+    for name in names:
+        print(name)
+
+def make_great(names):
+    print("These are magician's names: ")
+    for name in names:
+        print("-The Great " + name.title() + ".")
+names = ['hannah','ty','margot']
+make_great(names[:])
+separate_list = ['not_hana', 'not_ty', 'not_ty']
+show_magicians(separate_list)
+
+### Page 154
+## 8-12. Sandwiches
+def make_sandwich(bread, sauce, *ingrediants):
+    print("\nMaking the sandwich with " + bread + " and " + sauce + " which will have: ")
+    for ingrediant in ingrediants:
+        print( "- " + ingrediant)
+make_sandwich('whole wheat bread', 'mayo', 'tuna', 'letucs', 'tomato')
+make_sandwich('whole wheat bread', 'mayo', 'tuna', 'letucs')
+make_sandwich('whole wheat bread', 'mayo', 'tuna')
+
+## 8-13. User Profile
+def my_profile(first, last, **my_info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in my_info.items():
+        profile[key] = value
+    return profile
+user_profile = my_profile('Banafshe', 'Golpour', location = 'Toronto', field = 'Python')
+print(user_profile)
+
+## 8-14. Cars
+def car_info(manufacturer_name, model_name, **optional_features):
+    profile = {}
+    profile['manu_name'] = manufacturer_name
+    profile['mod_name'] = model_name
+    for key, value in optional_features.items():
+        profile[key] = value 
+    return profile
+
+car_profile = car_info('subaru', 'outback', color = 'blue', two_package = 'True')
+print(car_profile)
