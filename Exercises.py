@@ -765,3 +765,55 @@ print(car_profile)
 ## 8-16. Imports
 ## 8-17. Styling Functions
 
+### Page 166
+## 9-1. Restaurant
+class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name = restaurant_name 
+        self.cuisine_type = cuisine_type  
+    def describe_restaurant(self):
+        print("The name of this restaurant is: " + self.restaurant_name.title() + " and they serve: " + self.cuisine_type.title() + ".")
+    def open_restaurant(self):
+        print(self.restaurant_name.title() + " is now open.")
+    
+restaurant = Restaurant('Jacobs', 'Steak')
+print("This restaurant name is: " + restaurant.restaurant_name + ".")    
+print("They serve: " + restaurant.cuisine_type.title() + ".")
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+## 9-2. Three Restuarants
+
+restaurant_a = Restaurant('Anne Market', 'Italian')
+restaurant_a.describe_restaurant()
+restaurant_a.open_restaurant()
+
+restaurant_b = Restaurant('Haro', 'Sushi')
+restaurant_b.describe_restaurant()
+restaurant_b.open_restaurant()
+
+restaurant_c = Restaurant('Oxley', 'anything')
+restaurant_c.describe_restaurant()
+restaurant_c.open_restaurant()
+
+## 9-3. Users
+class User():
+    def __init__(self, first_name, last_name, age, weigth, height):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.weigth = weigth
+        self.height = height
+    def describe_user(self):
+        print("The user's full name is: " + self.first_name.title() + ' ' + self.last_name.title())
+
+    def greet_user(self):
+        print("Hello Dear " + self.first_name.title())
+
+user_info = User('bax','croft', 15, 45, 150)
+
+user_info.describe_user()
+user_info.greet_user()
+print(user_info.first_name.title() + " is " + str(user_info.age) + " years old. ")
+
