@@ -817,3 +817,63 @@ user_info.describe_user()
 user_info.greet_user()
 print(user_info.first_name.title() + " is " + str(user_info.age) + " years old. ")
 
+### Page 171
+## 9-4. Number Served
+class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name = restaurant_name 
+        self.cuisine_type = cuisine_type 
+        self.number_served = 0
+    def customers_number(self):
+        print("The name of this restaurant is: " + self.restaurant_name.title() + " and they serve: " + str(self.number_served) + " customers.")
+
+
+restaurant = Restaurant('Jacobs', 'Steak')
+restaurant.number_served = 500
+restaurant.customers_number()
+
+# Add a method called set_number_served() that lets you set the number of customers that have been served.
+class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name = restaurant_name 
+        self.cuisine_type = cuisine_type 
+        self.number_served = 0
+    def set_number_served(self):
+        print("The name of this restaurant is: " + self.restaurant_name.title() + " and they serve: " + str(self.number_served) + " customers.")
+
+
+restaurant = Restaurant('Jacobs', 'Steak')
+restaurant.number_served = 500
+restaurant.set_number_served()
+
+# Add a method called increment_number_served() that lets you increment the number of customers who've been served.
+    def increment_number_served(self, customers):
+        self.number_served += customers
+
+restaurant = Restaurant('Jacobs', 'Steak')
+restaurant.increment_number_served(1500)
+restaurant.customers_number()
+
+## 9-5. Login Attempts
+class User():
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.user_login_attempts = 0
+    def describe_user(self):
+        print("The user's full name is: " + self.first_name.title() + ' ' + self.last_name.title())
+    def assess_login_attempts(self):
+        print("This user tried " + str(self.user_login_attempts) + " times to login.")
+
+    def update_login_attempts(self, login_attempts):
+        self.user_login_attempts = login_attempts
+
+    def increment_login_attempts(self, attempt):
+        self.user_login_attempts += attempt
+
+user_info = User('bax','croft')
+print(user_info.describe_user())
+
+user_info.update_login_attempts(300)
+user_info.increment_login_attempts(1)
+user_info.assess_login_attempts()
