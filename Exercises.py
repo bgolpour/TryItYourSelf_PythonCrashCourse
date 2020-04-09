@@ -877,3 +877,143 @@ print(user_info.describe_user())
 user_info.update_login_attempts(300)
 user_info.increment_login_attempts(1)
 user_info.assess_login_attempts()
+
+### Page 178
+## 9-6. Ice Cream Stand
+class Restaurant():
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name = restaurant_name 
+        self.cuisine_type = cuisine_type  
+    def describe_restaurant(self):
+        print("The name of this restaurant is: " + self.restaurant_name.title() + " and they serve: " + self.cuisine_type.title() + ".")
+    def open_restaurant(self):
+        print(self.restaurant_name.title() + " is now open.")
+    
+restaurant = Restaurant('Jacobs', 'Steak')
+print("This restaurant name is: " + restaurant.restaurant_name + ".")    
+print("They serve: " + restaurant.cuisine_type.title() + ".")
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+class IceCreamStand(Restaurant):
+    def __init__(self,restaurant_name,cuisine_type):
+        super().__init__(restaurant_name,cuisine_type)
+        self.flavors = []
+
+    def ice_cream_falvors(self):
+        print("The ice cream falvors are: " + str(self.flavors) + ".")
+flavors_instance = IceCreamStand('Robins','Ice Cream')
+flavors_instance.flavors = ['vanilla', 'chocolate', 'black cherry']
+flavors_instance.describe_restaurant()
+flavors_instance.ice_cream_falvors()
+
+## 9-7.Admin
+class User():
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+    def describe_user(self):
+        print("The user's full name is: " + self.first_name.title() + ' ' + self.last_name.title())
+
+    def greet_user(self,first_name, last_name, age):
+        print("Hello Dear " + self.first_name.title())
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age):
+        super().__init__(first_name, last_name, age)
+        self.privileges = []
+    def show_privileges(self):
+        print(" -" + str(self.privileges))
+admin_instance = Admin('bax', 'croft', 65)
+admin_instance.privileges = ['can add post', 'can delete post', 'can ban user']
+admin_instance.show_privileges()
+
+### Page 199
+## 10-3. Guest
+prompt = "Tell me your name."
+prompt += "\nenter 'q' for quit"
+while True:
+    name = input(prompt)
+    if name == 'q':
+        break
+    else:
+        filename = 'programming.txt'
+        with open(filename, 'a') as file_object:
+            file_object.write(name)
+
+## 10-4. Guest Book 
+
+prompt = "And Your name is? " 
+prompt += "Enter 'q' to quite"
+
+while True:
+    name = input(prompt)
+
+    if name == 'q':
+        break
+    else:
+        filename = 'guest_book.txt'
+        with open(filename, 'a') as file_object:
+            file_object.write(name)
+            print("Dear " + name.title() + " Welcome back!!!")
+
+## 10-5. Programming Poll
+prompt = "Tell the reasons why you like programming? "
+prompt += "Enter 'q' to quit"
+
+while True:
+    answer = input(prompt)
+    if answer == 'q':
+        break
+    else:
+        filename = 'all_the_responses.txt'
+        with open(filename, 'a') as file_object:
+            file_object.write(answer)
+
+
+### Page 207
+## 10-6. Addition
+print("Give me two numbers, I will add them up and give you the result.")
+print("Enter 'q' to quit.")
+
+while True:
+    first_number = input("First_number")
+    if first_number == 'q':
+        break
+    second_number = input("Second_number")
+    try:
+        sum = int(first_number) + int(second_number)
+    except TypeError:
+        print("please use numbers instead of text.")
+    else:
+        print(sum)
+
+
+## 10-7. Addition Calculator
+# same solution as previous question.
+
+## 10-8. Cats and Dogs
+filename = 'cats.txt'
+try:
+    with open(filename) as file_object:
+        contents = file_object.read()
+except FileNotFoundError:
+    print("Sorry the file is not excists.")
+else:
+    print(contents)
+
+## 10-9 Silent Cats and Dogs
+filename = 'cats.txt'
+try:
+    with open(filename) as file_object:
+        contents = file_object.read()
+except FileNotFoundError:
+    pass
+else:
+    print(contents)
+
+## 10-10 Common Words
+
+
