@@ -1014,11 +1014,37 @@ except FileNotFoundError:
 else:
     print(contents)
 
-## 10-10 Common Words
+## 10-10. Common Words
 filename = 'gutenberg_first.txt'
 with open(filename) as file_object:
     content = file_object.read()
     the_counts = content.count('the')
     print(the_counts)
 
+### Page 214
+## 10-11. Favorite Number
+# Store the number
+import json
+favorite_number = input("What is your favorite number.")
+filename = 'fav_num.json'
+with open(filename, 'w') as file_object:
+    json.dump(favorite_number, file_object)
+# Read the stored value
+with open(filename) as file_object:
+    favorite_number = json.load(file_object)
+    print("I know your favorite number! It's " + favorite_number + "!")
 
+## 10-12. Favorite Number Remembered
+import json
+filename = 'fav_num.json'
+try: 
+    with open(filename) as file_object:
+        fav_number = json.load(file_object)
+except FileNotFoundError:
+    fav_number = input("What's your favorite number? ")
+    with open(filename, 'w') as file_object:
+        json.dump(fav_number, file_object)
+    print("Thanks for providing your fav number.")
+
+else: 
+    print("I know your favorite number! It's " + str(fav_number) + ".")
