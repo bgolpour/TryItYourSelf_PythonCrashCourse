@@ -1015,5 +1015,10 @@ else:
     print(contents)
 
 ## 10-10 Common Words
+filename = 'gutenberg_first.txt'
+with open(filename) as file_object:
+    content = file_object.read()
+    the_counts = content.count('the')
+    print(the_counts)
 
 
