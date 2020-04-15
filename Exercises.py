@@ -1048,6 +1048,7 @@ except FileNotFoundError:
 
 else: 
     print("I know your favorite number! It's " + str(fav_number) + ".")
+
 ## 10-13. Verify User
 import json
 def get_stored_username():
@@ -1080,3 +1081,14 @@ def greet_user():
         username = get_new_username()
         print("We'll remember you when you come back, " + username + "!")
 greet_user()
+
+### Page 228
+## 11-3. Employee
+class Employee():
+    def __init__(self,f_name, l_name, salary):
+    self.f_name = f_name
+    self.l_name = l_name
+    self.salary = salary
+
+    def give_raise(self, amount=5000)
+        self.salary += amount
